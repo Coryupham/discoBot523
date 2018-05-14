@@ -77,7 +77,7 @@ bot.on('message', message => {
   }
 
   if (command === "meme") {
-    message.channel.sendMessagey(meme[Math.floor((Math.random() * meme.length))]);
+    message.channel.sendMessage(meme[Math.floor((Math.random() * meme.length))]);
   }
 
   if (command === "roll") {
