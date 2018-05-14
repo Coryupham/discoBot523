@@ -51,7 +51,7 @@ bot.on('message', message => {
   let args = message.content.split(" ").slice(1);
 
   if (command === "help") {
-    message.channel.sendMessage(
+    message.reply(
       "**!meme** | Displays:ok_hand: :fire: meme" +
       "\n**!ping** | pong" +
       "\n**!say <message>** | I'll do whatever you say :wink:" +
@@ -70,7 +70,7 @@ bot.on('message', message => {
   if (command === "say") {
     if (hasRole(message.member, "Admin") || (message.member, "Mods")) {
       var placeHolder = args.join("");
-      message.channel.sendMessage(placeHolder);
+      message.reply(placeHolder);
     } else {
       message.reply("You can't tell me what to do :angry:");
     }
@@ -82,7 +82,7 @@ bot.on('message', message => {
 
   if (command === "roll") {
     var rolled = Math.floor((Math.random() * 100));
-    message.channel.sendMessage(':game_die: ' + rolled);
+    message.reply(':game_die: ' + rolled);
   }
 
   if (command === "awards") {
@@ -101,7 +101,7 @@ bot.on('message', message => {
             for (var award in awards) {
               string += '\n🏅' + awards[award] + 'x ' + award;
             }
-            message.channel.sendMessage('', {
+            message.reply('', {
               embed: {
                 color: 3447003,
                 description: string
@@ -114,7 +114,7 @@ bot.on('message', message => {
 
                 if (body.size > 0) {
                   //								if (body.is_registered === "1") {
-                  message.channel.sendMessage('', {
+                  message.reply('', {
                     embed: {
                       color: 3447003,
                       description: body.result[0].number + ' hasn\'t won any awards yet this season.'
@@ -296,12 +296,12 @@ bot.on('message', message => {
   }
 
   if (command === "ping") {
-    message.channel.sendMessage('pong');
+    message.reply('pong');
   }
   if (command === "purge") {
     if (hasRole(message.member, "Owner")) {
       if (args.length >= 3) {
-        message.channel.sendMessage("You defined too many arguments. Usage:");
+        message.reply("You defined too many arguments. Usage:");
       } else {
         var msg;
         if (args === 1) {
@@ -314,7 +314,7 @@ bot.on('message', message => {
         }).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
       }
     } else {
-      message.channel.sendMessage("You must be an [Admin] to use this command.");
+      message.reply("You must be an [Admin] to use this command.");
     }
   }
 });
