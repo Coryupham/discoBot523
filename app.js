@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-var request = require('request');
+//var request = require('request');
 const bot = new Discord.Client();
 
 const config = require("./config.json");
