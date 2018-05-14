@@ -52,7 +52,7 @@ bot.on('message', message => {
 
   if (command === "help") {
     message.reply(
-      "**!meme** | Displays:ok_hand: :fire: meme" +
+      "\n**!meme** | Displays:ok_hand: :fire: meme" +
       "\n**!ping** | pong" +
       "\n**!say <message>** | I'll do whatever you say :wink:" +
       "\n**!kick** | Bye bye :cry:" +
