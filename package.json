@@ -12,6 +12,7 @@
   "dependencies": {
     "discord.js": "",
     "npm": "^6.0.0"
+    "request": "^2.85.0"
   },
   "engines": {
     "node": "^10.0.0"
