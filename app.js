@@ -51,7 +51,7 @@ bot.on('message', message => {
   let args = message.content.split(" ").slice(1);
 
   if (command === "help") {
-    message.reply(
+   message.channel.sendMessage(
       "\n**!meme** | Displays:ok_hand: :fire: meme" +
       "\n**!ping** | pong" +
       "\n**!say <message>** | I'll do whatever you say :wink:" +
@@ -70,19 +70,19 @@ bot.on('message', message => {
   if (command === "say") {
     if (hasRole(message.member, "Admin") || (message.member, "Mods")) {
       var placeHolder = args.join("");
-      message.reply(placeHolder);
+      message.channel.sendMessage(placeHolder);
     } else {
-      message.reply("You can't tell me what to do :angry:");
+      message.channel.sendMessage("You can't tell me what to do :angry:");
     }
   }
 
   if (command === "meme") {
-    message.reply(meme[Math.floor((Math.random() * meme.length))]);
+    message.channel.sendMessagey(meme[Math.floor((Math.random() * meme.length))]);
   }
 
   if (command === "roll") {
     var rolled = Math.floor((Math.random() * 100));
-    message.reply(':game_die: ' + rolled);
+    message.channel.sendMessage(':game_die: ' + rolled);
   }
 
   if (command === "awards") {
