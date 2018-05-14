@@ -1,17 +1,16 @@
 {
-  "name": "bracketboi",
+  "name": "discoBot523",
   "version": "1.0.0",
-  "description": "Collects data for the BattleBots Prediction League Discord server.",
+  "description": "A handy helper for the studnts of team 523",
   "main": "app.js",
-  "author": "Jordan Kiesel",
+  "author": "Cory Upham",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jtkiesel/bracketboi.git"
+    "url": "Private"
   },
   "dependencies": {
-    "discord.js": "github:hydrabolt/discord.js",
-    "mongodb": "^3.0.7",
+    "discord.js": "",
     "npm": "^6.0.0"
   },
   "engines": {
