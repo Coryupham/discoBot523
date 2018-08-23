@@ -220,7 +220,7 @@ bot.on('message', message => {
   }
 
   if (command === "info") {
-    request('http://api.vexdb.io/v1/get_teams?team=' + args,
+    request('http://api.vexdb.io/v1/get_teams?season=current&team=' + args,
       function(error, response, body) {
         body = JSON.parse(body);
 
