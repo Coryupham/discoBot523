@@ -86,7 +86,7 @@ bot.on('message', message => {
   }
 
   if (command === "awards") {
-    request('http://api.vexdb.io/v1/get_awards?team=' + args + '&season=In The Zone',
+    request('http://api.vexdb.io/v1/get_awards?team=' + args + '&season=Turning Point',
       function(error, response, body) {
         body = JSON.parse(body);
 
